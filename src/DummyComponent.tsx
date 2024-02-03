@@ -16,8 +16,8 @@ const DummyComponent: React.FC<DummyComponentProps> = ({
 }) => {
   return (
     <div>
-      <h1>I am {name}</h1>
-      <h2>I am {age} years Old</h2>
+      {name ? <h1>I am {name}</h1> : <h1>I have no name</h1>}
+      {age ? <h2>I am {age} years Old</h2> : <h2>I don't count the years</h2>}
       <p>{isSad ? "😔" : "😀 "}</p>
     </div>
   );
